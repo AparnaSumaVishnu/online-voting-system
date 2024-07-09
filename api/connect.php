@@ -1,12 +1,14 @@
 <?php
+$host = "localhost"; // MySQL host (usually 'localhost')
+$username = "root"; // MySQL username
+$password = ""; // MySQL password (leave empty if none)
+$database = "voting"; // MySQL database name
 
-$connect = mysqli_connect("localhost","root","","voting") or die("connection failed!");
+// Create connection
+$connect = new mysqli($host, $username, $password, $database);
 
-if($connect){
-    echo "Connected!";
+// Check connection
+if ($connect->connect_error) {
+    die("Connection failed: " . $connect->connect_error);
 }
-else{
-    echo "Not Connected!";
-}
-
 ?>

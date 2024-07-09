@@ -100,7 +100,6 @@
 
         <div class="mainpanel">
         <div id="Profile">
-            <center><img src="../uploads/book.jpg/<?php echo $userdata['photo']?>" height="200" width="200"></center><br><br>
             <b>Name:</b><?php echo $userdata['name']?><br><br>
             <b>Mobile:</b><?php echo $userdata['mobile']?><br><br>
             <b>Address:</b><?php echo $userdata['address']?><br><br>
@@ -112,7 +111,6 @@
                     for ($i=0; $i<count($groupsdata); $i++){
                         ?>
                         <div>
-                            <img style="float: right" src="../uploads/<?php echo $groupsdata[$i]['photo'] ?>" height="100" width="100">
                             <b>Group Name: </b><?php echo $groupsdata[$i]['name']?><br><br>
                             <b>Votes: </b><?php echo $groupsdata[$i]['votes']?><br><br>
                             <form action="../api/vote.php" method="POST">
